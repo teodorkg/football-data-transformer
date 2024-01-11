@@ -23,20 +23,24 @@ This Big Data Management project demonstrates the ability to handle, transform, 
 
 ## Getting Started
 ### Prerequisites
-- Python 3.12
+- Python 3.X
 - PySpark
-- MongoDB Atlas account
+- MongoDB Atlas password (contact teodorkg)
 - Relational Database (e.g., PostgreSQL, MySQL)
 
 ### Installation
 1. Clone the repository: `git clone https://github.com/teodorkg/football-data-transformer.git`
 2. Install the required Python packages: `pip install -r requirements.txt`
+3. Install git large file storage: `git lfs install`. [How to use?](https://git-lfs.com/)
+4. Install MongoDB Atlas SSL certificates and restart PC: 
+  - [Let's Encrypt R3](https://letsencrypt.org/certs/lets-encrypt-r3.der)
+  - [ISRG Root X1](https://letsencrypt.org/certs/isrgrootx1.der)
+  - [ISRG Root X2](https://letsencrypt.org/certs/isrg-root-x2.der)
 
 ## Usage
 1. **Data Extraction**: Run the scripts to extract data from MongoDB Atlas, CSV, and JSON files.
 2. **Data Transformation**: Execute the PySpark notebooks/scripts to perform data transformation.
-3. **Data Loading**: Load the transformed data into the chosen relational database.
+3. **Data Loading**: Load the transformed data into the relational database.
 
 ## Documentation
-- The `docs` directory contains detailed documentation of the project.
 - The Jupyter Notebook includes comments and explanations for each step of the data transformation process.
