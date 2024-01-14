@@ -1,0 +1,5 @@
+#removing clubs of retired players
+UPDATE players
+SET current_club_id = -1
+WHERE last_season != 2023
+players2 = players.withColumn("current_club_id", when(players.last_season != 2023, -1))
