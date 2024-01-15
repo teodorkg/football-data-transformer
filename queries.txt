@@ -7,5 +7,5 @@ players2 = players.withColumn("current_club_id", when(players.last_season != 202
 #selecting yellow and red cards from premier league
 cards_Premier_League = games.join(events, on="game_id", how="inner").
                            join(players, on="player_id", how="inner").
-                           filter(events["description"] == "Cards" AND games["competition_id"] == "GB1").
+                           filter(events["type"] == "Cards" AND games["competition_id"] == "GB1").
                            select(players.first_name, players.last_name, games.home_club_name, games.away_club_name, games.date, events.description, events.minute)    
